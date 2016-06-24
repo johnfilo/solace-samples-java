@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Getting Started Samples for Solace Messaging API for Java (JCSMP)
+email: mark.spielman@solacesystems.com
+description: > # this means to ignore newlines until "baseurl:"
+  These tutorials will get you up to speed and sending messages with Solace technology as quickly as possible.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "mdspielman.github.io/solace-getting-started-java" # the base hostname & protocol for your site
+twitter_username:
+github_username:  mdspielman
+
+# Build settings
+markdown: kramdown
