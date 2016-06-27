@@ -1,3 +1,8 @@
+---
+layout: post
+title: Request/Reply (Java)
+---
+
 This tutorial outlines both roles in the request-response message exchange pattern. It will show you how to act as the client by creating a request, sending it and waiting for the response. It will also show you how to act as the server by receiving incoming requests, creating a reply and sending it back to the client. It builds on the basic concepts introduced in [publish/subscribe tutorial](http://dev.solacesystems.com/docs/get-started/publish-subscribe_java/).
 
 ![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/request-reply.png)

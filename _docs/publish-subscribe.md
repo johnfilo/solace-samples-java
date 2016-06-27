@@ -1,3 +1,8 @@
+---
+layout: post
+title: Publish/Subscribe (Java)
+---
+
 This tutorial will introduce you to the fundamentals of the Solace API by connecting a client, adding a topic subscription and sending a message matching this topic subscription. This forms the basis for any publish / subscribe message exchange illustrated here:
 
 ![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/publish-subscribe.png)

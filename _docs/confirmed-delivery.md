@@ -1,3 +1,8 @@
+---
+layout: post
+title: Confirmed Delivery
+---
+
 This tutorial builds on the basic concepts introduced in [Persistence with Queues](http://dev.solacesystems.com/docs/get-started/persistence-with-queues_java/) tutorial and will show you how to properly process publisher acknowledgements. Once an acknowledgement for a message has been received and processed, you have confirmed your persistent messages have been properly accepted by the Solace message router and therefore can be guaranteed of no message loss.
 
 ![confirmed-delivery](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/confirmed-delivery.png)
