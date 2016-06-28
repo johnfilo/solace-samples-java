@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Topic to Queue Mapping (Java)
+order: 5
 ---
 
-This tutorial builds on the basic concepts introduced in [Persistence with Queues](http://dev.solacesystems.com/docs/get-started/persistence-with-queues_java/) tutorial and will show you how to make use of one of Solace’s advanced queueing features called “Topic to Queue Mapping.”
+This tutorial builds on the basic concepts introduced in [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial and will show you how to make use of one of Solace’s advanced queueing features called “Topic to Queue Mapping.”
 
 ![topic-to-queue-mapping](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/topic-to-queue-mapping.png)
 
@@ -26,7 +27,7 @@ This tutorial assumes the following:
     *   Enabled message VPN configured for guaranteed messaging support.
     *   Enabled client username.
     *   Client-profile enabled with guaranteed messaging permissions.
-*   You understand the basics introduced in [Persistence with Queues](http://dev.solacesystems.com/docs/get-started/persistence-with-queues_java/)
+*   You understand the basics introduced in [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues)
 
 Note that one simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/). By default the Solace VMR will with the “default” message VPN configured and ready for guaranteed messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration adapt the tutorial appropriately to match your configuration.
 
@@ -45,7 +46,7 @@ The goal of this tutorial is to understand the following:
 
 This tutorial depends on you having the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples. The instructions in this tutorial assume you have downloaded the Java API library and unpacked it to a known location. If your environment differs then adjust the build instructions appropriately.
 
---
+---
 
 ## Connection setup
 
@@ -70,7 +71,7 @@ The only difference in the above is the duplicate subscription processing boolea
 
 ## Review: Receiving message from a queue
 
-The [Persistence with Queues](http://dev.solacesystems.com/docs/get-started/persistence-with-queues_java/) tutorial demonstrated how to publish and receive messages from a queue. In doing this it used a JCSMPSession, XMLMessageProducer, and Consumer and this sample will do so in the same way. This sample will also depend on the endpoint being provisioned by through the API as was done in the previous tutorial. For clarity, this code is not repeated in the discussion but is included in the full working sample available in the summary section.
+The [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial demonstrated how to publish and receive messages from a queue. In doing this it used a JCSMPSession, XMLMessageProducer, and Consumer and this sample will do so in the same way. This sample will also depend on the endpoint being provisioned by through the API as was done in the previous tutorial. For clarity, this code is not repeated in the discussion but is included in the full working sample available in the summary section.
 
 ---
 

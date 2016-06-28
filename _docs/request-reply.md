@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Request/Reply (Java)
+order: 3
 ---
 
-This tutorial outlines both roles in the request-response message exchange pattern. It will show you how to act as the client by creating a request, sending it and waiting for the response. It will also show you how to act as the server by receiving incoming requests, creating a reply and sending it back to the client. It builds on the basic concepts introduced in [publish/subscribe tutorial](http://dev.solacesystems.com/docs/get-started/publish-subscribe_java/).
+This tutorial outlines both roles in the request-response message exchange pattern. It will show you how to act as the client by creating a request, sending it and waiting for the response. It will also show you how to act as the server by receiving incoming requests, creating a reply and sending it back to the client. It builds on the basic concepts introduced in [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe).
 
 ![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/request-reply.png)
 
@@ -60,7 +61,7 @@ This tutorial depends on you having the Java API downloaded and available. The J
 
 ## Connecting a session to the message router
 
-As with other tutorials, this tutorial requires a JCSMPSession connected to the default message VPN of a Solace VMR which has authentication disabled. So the only required information to proceed is the Solace VMR host string which this tutorial accepts as an argument. Connect the session as outlined in the [publish/subscribe tutorial](http://dev.solacesystems.com/docs/get-started/publish-subscribe_java/).
+As with other tutorials, this tutorial requires a JCSMPSession connected to the default message VPN of a Solace VMR which has authentication disabled. So the only required information to proceed is the Solace VMR host string which this tutorial accepts as an argument. Connect the session as outlined in the [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe).
 
 ---
 
@@ -84,7 +85,7 @@ XMLMessageProducer producer = session.getMessageProducer(new JCSMPStreamingPubli
 XMLMessageConsumer consumer = session.getMessageConsumer((XMLMessageListener)null); consumer.start();
 ```
 
-Next you must create a message and the topic to send the message to. This is done in the same way as illustrated in the [pub/sub example](http://dev.solacesystems.com/docs/get-started/publish-subscribe_java/).
+Next you must create a message and the topic to send the message to. This is done in the same way as illustrated in the [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe).
 
 ```java
 final Topic topic = JCSMPFactory.onlyInstance().createTopic("tutorial/requests");

@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Confirmed Delivery
+title: Confirmed Delivery (Java)
+order: 4
 ---
 
-This tutorial builds on the basic concepts introduced in [Persistence with Queues](http://dev.solacesystems.com/docs/get-started/persistence-with-queues_java/) tutorial and will show you how to properly process publisher acknowledgements. Once an acknowledgement for a message has been received and processed, you have confirmed your persistent messages have been properly accepted by the Solace message router and therefore can be guaranteed of no message loss.
+This tutorial builds on the basic concepts introduced in [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial and will show you how to properly process publisher acknowledgements. Once an acknowledgement for a message has been received and processed, you have confirmed your persistent messages have been properly accepted by the Solace message router and therefore can be guaranteed of no message loss.
 
 ![confirmed-delivery](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/confirmed-delivery.png)
 
@@ -84,7 +85,7 @@ session.connect();
 
 ## Adding Message Correlation on Send
 
-The [Persistence with Queues](http://dev.solacesystems.com/docs/get-started/persistence-with-queues_java/) tutorial demonstrated how to send persistent messages using code very similar to the following. The only difference below is the message text and the loop.
+The [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial demonstrated how to send persistent messages using code very similar to the following. The only difference below is the message text and the loop.
 
 ```java
 for (int i = 1; i &amp;lt;= count; i++) {

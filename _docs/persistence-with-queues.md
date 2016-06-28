@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Persistence with Queues (Java)
+order: 2
 ---
-This tutorial builds on the basic concepts introduced in the [publish/subscribe tutorial](http://dev.solacesystems.com/docs/get-started/publish-subscribe_java/), and will show you how to send
+This tutorial builds on the basic concepts introduced in the [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe), and will show you how to send
 and receive persistent messages from a Solace message router queue in a point to point fashion.
 
 ![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/persistence-tutorial.png)
