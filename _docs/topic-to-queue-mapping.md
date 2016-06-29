@@ -42,9 +42,13 @@ The goal of this tutorial is to understand the following:
 
 ---
 
-## Obtaining the Solace API
+## Trying it yourself
 
-This tutorial depends on you having the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples. The instructions in this tutorial assume you have downloaded the Java API library and unpacked it to a known location. If your environment differs then adjust the build instructions appropriately.
+This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
+
+At the end, this tutorial walks through downloading and running the sample from source.
 
 ---
 
@@ -137,32 +141,49 @@ try {
 }
 ```
 
----
-
 ## Summarizing
 
-When you put this all together you have now added a topic subscription to a queue and successfully published persistent messages to the topic and had them arrive on your Queue endpoint.
+The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
 
-See the following source code for the full application:
+*   [TopicToQueueMapping.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/TopicToQueueMapping.java)
 
-*   [TopicToQueueMapping.java](http://dev.solacesystems.com/wp-content/uploads/TopicToQueueMapping.java)
+
+### Getting the Source
+
+Clone the GitHub repository containing the Solace samples.
+
+```
+git clone git://github.com/mdspielman/solace-getting-started-java.git
+cd solace-getting-started-java
+```
 
 ### Building
 
-Building this example is simple. The following provides an example using Linux. These instructions assume you have unpacked the Solace Java API into a directory next to the getting started samples that you just downloaded. There are many suitable ways to build and execute these samples in Java. Adapt these instructions to suit your needs depending on your environment.
+Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-getting-started-java`.
 
-In the following example replace VERSION with the Solace API version you downloaded.
+In the following command line replace VERSION with the Solace API version you downloaded.
 
 ```
-javac -cp sol-jcsmp-VERSION/lib/*:. TopicToQueueMapping.java
+mkdir libs
+cp  ../sol-jcsmp-VERSION/lib/* libs
 ```
 
-### Sample Output
+Now you can simply build the project using Gradle.
+
+```
+./gradlew assemble
+```
+
+This build all of the Java Getting Started Samples with OS specific launch scripts. The files are staged in the `build/staged` directory.
+
+### Running the Sample
 
 Run the example from the command line as follows.
 
 ```
-$ java -cp sol-jcsmp-VERSION/lib/*:. TopicToQueueMapping HOST
+$ ./build/staged/bin/topicToQueueMapping HOST
 ```
+
+You have now added a topic subscription to a queue and successfully published persistent messages to the topic and had them arrive on your Queue endpoint.
 
 If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/) for answers to common issues.

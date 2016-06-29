@@ -54,6 +54,8 @@ This tutorial is available in [GitHub](https://github.com/mdspielman/solace-gett
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
+At the end, this tutorial walks through downloading and running the sample from source.
+
 ---
 
 ## Connecting to the Solace message router
@@ -178,7 +180,7 @@ The full source code for this example is available in [GitHub here](https://gith
 Clone the GitHub repository containing the Solace samples.
 
 ```
-git clone git://github.com/mdspielman/solace-getting-started-java
+git clone git://github.com/mdspielman/solace-getting-started-java.git
 cd solace-getting-started-java
 ```
 

@@ -30,9 +30,15 @@ The goal of this tutorial is to understand the following:
 
 *  How to properly handle persistent message acknowledgements on message send.
 
-## Obtaining the Solace API
+---
 
-This tutorial depends on you having the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples. The instructions in this tutorial assume you have downloaded the Java API library and unpacked it to a known location. If your environment differs then adjust the build instructions appropriately.
+## Trying it yourself
+
+This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
+
+At the end, this tutorial walks through downloading and running the sample from source.
 
 ---
 
@@ -157,30 +163,47 @@ class PubCallback implements JCSMPStreamingPublishCorrelatingEventHandler {
 
 ---
 
+
 ## Summarizing
 
-When you put this all together you end up with a program that will send messages to the Solace message router, then wait for their acknowledgements and finally once all messages are acknowledged, it will print the status of each message to the screen.
+The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
 
-See the following source code for the full application:
+*   [ConfirmedPublish.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java)
 
-*   [ConfirmedPublish.java](http://dev.solacesystems.com/wp-content/uploads/ConfirmedPublish.java)
+### Getting the Source
+
+Clone the GitHub repository containing the Solace samples.
+
+```
+git clone git://github.com/mdspielman/solace-getting-started-java.git
+cd solace-getting-started-java
+```
 
 ### Building
 
-Building this example is simple. The following provides an example using Linux. These instructions assume you have unpacked the Solace Java API into a directory next to the getting started samples that you just downloaded. There are many suitable ways to build and execute these samples in Java. Adapt these instructions to suit your needs depending on your environment.
+Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-getting-started-java`.
 
-In the following example replace VERSION with the Solace API version you downloaded.
+In the following command line replace VERSION with the Solace API version you downloaded.
 
 ```
-javac -cp sol-jcsmp-VERSION/lib/*:. ConfirmedPublish.java
+mkdir libs
+cp  ../sol-jcsmp-VERSION/lib/* libs
 ```
 
-### Sample Output
+Now you can simply build the project using Gradle.
+
+```
+./gradlew assemble
+```
+
+This build all of the Java Getting Started Samples with OS specific launch scripts. The files are staged in the `build/staged` directory.
+
+### Running the Sample
 
 Run the example from the command line as follows.
 
 ```
-$ java -cp sol-jcsmp-VERSION/lib/*:. ConfirmedPublish HOST</pre>
+$ ./build/staged/bin/confirmedPublish HOST
 ```
 
 You have now successfully sent persistent messages to a Solace router and confirmed its receipt by correlating the acknowledgement.

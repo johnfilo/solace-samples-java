@@ -40,9 +40,13 @@ As with other tutorials, this tutorial will connect to the default message VPN o
 
 ---
 
-## Obtaining the Solace API
+## Trying it yourself
 
-This tutorial depends on you having the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples. The instructions in this tutorial assume you have downloaded the Java API library and unpacked it to a known location. If your environment differs then adjust the build instructions appropriately.
+This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
+
+At the bottom, this tutorial walks through downloading and running the sample from source.
 
 ---
 
@@ -202,33 +206,49 @@ try {
 }
 ```
 
----
-
 ## Summarizing
 
-Combining the example source code show above results in the following source code files:
+The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
 
-*   [QueueProducer.java](http://dev.solacesystems.com/wp-content/uploads/QueueProducer.java)
-*   [QueueConsumer.java](http://dev.solacesystems.com/wp-content/uploads/QueueConsumer.java)
+*   [QueueProducer.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/QueueProducer.java)
+*   [QueueConsumer.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/QueueConsumer.java)
+
+
+### Getting the Source
+
+Clone the GitHub repository containing the Solace samples.
+
+```
+git clone git://github.com/mdspielman/solace-getting-started-java.git
+cd solace-getting-started-java
+```
 
 ### Building
 
-Building these examples is simple. The following provides an example using Linux. These instructions assume you have unpacked the Solace Java API into a directory next to the getting started samples that you just downloaded. There are many suitable ways to build and execute these samples in Java. Adapt these instructions to suit your needs depending on your environment.
+Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-getting-started-java`.
 
-In the following examples replace VERSION with the Solace API version you downloaded.
-
-```
-javac -cp sol-jcsmp-VERSION/lib/*:. QueueProducer.java
-javac -cp sol-jcsmp-VERSION/lib/*:. QueueConsumer.java
-```
-
-### Sample Output
-
-First start the QueueProducer to send a message to the queue. Then you can use the QueueConsumer sample to receive the messages from the queue.
+In the following command line replace VERSION with the Solace API version you downloaded.
 
 ```
-$ java -cp sol-jcsmp-VERSION/lib/*:. QueueProducer HOST
-$ java -cp sol-jcsmp-VERSION/lib/*:. QueueConsumer HOST
+mkdir libs
+cp  ../sol-jcsmp-VERSION/lib/* libs
+```
+
+Now you can simply build the project using Gradle.
+
+```
+./gradlew assemble
+```
+
+This build all of the Java Getting Started Samples with OS specific launch scripts. The files are staged in the `build/staged` directory.
+
+### Running the Sample
+
+First start the `QueueProducer` to send a message to the queue. Then you can use the `QueueConsumer` sample to receive the messages from the queue.
+
+```
+$ ./build/staged/bin/queueProducer HOST
+$ ./build/staged/bin/queueConsumer HOST
 ```
 
 You have now successfully connected a client, sent persistent messages to a queue and received them from a consumer flow.
