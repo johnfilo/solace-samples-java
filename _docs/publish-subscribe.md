@@ -48,9 +48,11 @@ For the purposes of this tutorial, you will connect to the default message VPN o
 
 ---
 
-## Obtaining the Solace API
+## Trying it yourself
 
-This tutorial depends on you having the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples. The instructions in this tutorial assume you have downloaded the Java API library and unpacked it to a known location. If your environment differs then adjust the build instructions appropriately.
+This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 ---
 
@@ -166,36 +168,53 @@ At this point the producer has sent a message to the Solace message router and y
 
 ## Summarizing
 
-Combining the example source code shown above results in the following source code files:
+The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
 
-*   [TopicPublisher.java](http://dev.solacesystems.com/wp-content/uploads/TopicPublisher.java)
-*   [TopicSubscriber.java](http://dev.solacesystems.com/wp-content/uploads/TopicSubscriber.java)
+*   [TopicPublisher.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java)
+*   [TopicSubscriber.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java)
+
+### Getting the Source
+
+Clone the GitHub repository containing the Solace samples.
+
+```
+git clone git://github.com/mdspielman/solace-getting-started-java
+cd solace-getting-started-java
+```
 
 ### Building
 
-Building these examples is simple. The following provides an example using Linux. These instructions assume you have unpacked the Solace Java API into a directory next to the getting started samples that you just downloaded. There are many suitable ways to build and execute these samples in Java. Adapt these instructions to suit your needs depending on your environment.
+Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-getting-started-java`.
 
-In the following examples replace VERSION with the Solace API version you downloaded.
-
-```
-javac -cp sol-jcsmp-VERSION/lib/*:. TopicPublisher.java
-javac -cp sol-jcsmp-VERSION/lib/*:. TopicSubscriber.java
-```
-
-### Sample Output
-
-If you start the TopicSubscriber with a single argument for the Solace message router host address it will connect and wait for a message.
+In the following command line replace VERSION with the Solace API version you downloaded.
 
 ```
-$ java -cp sol-jcsmp-VERSION/lib/*:. TopicSubscriber HOST
+mkdir libs
+cp  ../sol-jcsmp-VERSION/lib/* libs
+```
+
+Now you can simply build the project using Gradle.
+
+```
+./gradlew assemble
+```
+
+This build all of the Java Getting Started Samples with OS specific launch scripts. The files are staged in the `build/staged` directory.
+
+### Running the Sample
+
+If you start the `TopicSubscriber` with a single argument for the Solace message router host address it will connect and wait for a message.
+
+```
+$ ./build/staged/bin/topicSubscriber HOST
 TopicSubscriber initializing...
 Connected. Awaiting message...
 ```
 
-Then you can send a message using the TopicPublisher again using a single argument to specify the Solace message router host address. If successful, the output for the producer will look like the following:
+Then you can send a message using the `TopicPublisher` again using a single argument to specify the Solace message router host address. If successful, the output for the producer will look like the following:
 
 ```
-$ java -cp sol-jcsmp-VERSION/lib/*:. TopicPublisher HOST
+$ ./build/staged/bin/topicPublisher HOST
 Topic Publisher initializing...
 Connected. About to send message 'Hello world!' to topic 'tutorial/topic'...
 Message sent. Exiting.
