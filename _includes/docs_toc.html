@@ -1,0 +1,16 @@
+<div class="unit one-fifth">
+  <aside>
+    {% for section in site.data.docs %}
+    <h4>{{ section.title }}</h4>
+
+    <ul>
+      {% for item in section.docs %}
+        {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+        {% assign p = site.docs | where:"url", item_url | first %}
+        <li class="{% if item_url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% endfor %}
+  </aside>
+</div>

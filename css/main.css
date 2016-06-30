@@ -464,9 +464,15 @@ div {
 
 div .av_one_half {
     margin-left: 6%;}
-	
+
 div .av_one_half {width:47%;}
 
 body .alignright { float:right;margin:4px 0px 0px 10px;display: block; position: relative; }
 
-
+div .flex_column {
+  z-index: 1;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+}

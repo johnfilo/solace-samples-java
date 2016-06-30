@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: docs
 title: Topic to Queue Mapping (Java)
-order: 5
 ---
 
 This tutorial builds on the basic concepts introduced in [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial and will show you how to make use of one of Solace’s advanced queueing features called “Topic to Queue Mapping.”

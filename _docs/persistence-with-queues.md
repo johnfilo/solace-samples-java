@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: docs
 title: Persistence with Queues (Java)
-order: 2
 ---
 This tutorial builds on the basic concepts introduced in the [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe), and will show you how to send
 and receive persistent messages from a Solace message router queue in a point to point fashion.
@@ -46,7 +45,7 @@ This tutorial is available in [GitHub](https://github.com/mdspielman/solace-gett
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
-At the bottom, this tutorial walks through downloading and running the sample from source.
+At the end, this tutorial walks through downloading and running the sample from source.
 
 ---
 
