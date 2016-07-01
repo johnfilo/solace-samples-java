@@ -1,8 +1,7 @@
-- title: Getting Started
+- title: Available Tutorials
   docs:
   - publish-subscribe
   - persistence-with-queues
   - request-reply
   - confirmed-delivery
   - topic-to-queue-mapping
-  

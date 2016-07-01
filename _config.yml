@@ -12,6 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   These tutorials will get you up to speed and sending messages with Solace technology as quickly as possible.
 baseurl: "/solace-getting-started-java" # the subpath of your site, e.g. /blog
 url: "mdspielman.github.io" # the base hostname & protocol for your site
+repository: https://github.com/mdspielman/solace-getting-started-java
 
 twitter:
   username: "@github"

@@ -11,7 +11,7 @@ In addition to spooling messages published directly to the queue, it is possible
 
 The following diagram illustrates this feature.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/topic-to-queue-mapping-detail.png)
+<img src="http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/topic-to-queue-mapping-detail.png" width="500" height="206" />
 
 If you have a durable queue named `Q`, it will receive messages published directly to the queue destination named `Q`. However, it is also possible to add subscriptions to this queue in the form of topics. This example adds topics `A` and `B`. Once these subscriptions are added, the queue will start receiving messages published to the topic destinations `A` and `B`. When you combine this with the wildcard support provided by Solace topics this opens up a number of interesting use cases.
 

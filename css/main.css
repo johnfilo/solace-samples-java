@@ -30,6 +30,9 @@ ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 15px; } 
+
 /**
  * Images
  */
@@ -468,3 +471,34 @@ div .av_one_half {
 div .av_one_half {width:47%;}
 
 body .alignright { float:right;margin:4px 0px 0px 10px;display: block; position: relative; }
+
+
+.logo, .logo a{
+overflow: hidden;
+position: relative;
+display: block;
+height: 100%;
+}
+
+.logo img{
+padding:0;
+display: block;
+width: auto;
+height: auto;
+max-height: 100%;
+image-rendering:auto;
+position: relative;
+z-index: 2;
+height : 100%\9; /*hack: fixes ie8 logo*/
+height: auto\9; /*hack: fixes ie8 squished logo*/
+-webkit-transition: opacity 0.4s ease-in-out;
+transition: 		opacity 0.4s ease-in-out;
+}
+
+.logo img.alternate{
+position: absolute;
+z-index: 1;
+top:0;
+left:0;
+opacity: 0;
+}
