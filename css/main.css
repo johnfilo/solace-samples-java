@@ -31,7 +31,7 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 15px; } 
+  margin-top: 15px; }
 
 /**
  * Images
@@ -502,3 +502,10 @@ top:0;
 left:0;
 opacity: 0;
 }
+
+/*
+ *
+ */
+ .button {width:150px; padding:10px; background:#005dab; text-align:center; border:1px solid #013a6a; border-radius:4px;}
+ .button:hover {background:#013a6a;}
+ a.button-text {color:#fff;}
