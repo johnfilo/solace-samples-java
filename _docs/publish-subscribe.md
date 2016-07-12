@@ -36,12 +36,33 @@ The goal of this tutorial is to demonstrate the most basic messaging interaction
 In order to send or receive messages to a Solace message router, you need to know a few details of how to connect to the Solace message router. Specifically you need to know the following:
 
 
-|**Resource**|**Value**|**Description**|
-|------------|---------|---------------|
-|Host        |String of the form `DNS name` or `IP:Port`|This is the address clients use when connecting to the Solace message router to send and receive messages. For a Solace VMR this there is only a single interface so the IP is the same as the management IP address. For Solace message router appliances this is the host address of the message-backbone.|
-|Message VPN|String|The Solace message router Message VPN that this client should connect to. The simplest option is to use the “default” message-vpn which is present on all Solace message routers and fully enabled for message traffic on Solace VMRs.|
-|Client Username|String|The client username. For the Solace VMR default message VPN, authentication is disabled by default, so this can be any value.|
-|Client Password|String|The optional client password. For the Solace VMR default message VPN, authentication is disabled by default, so this can be any value or omitted.|
+<table>
+  <tr>
+    <th>Resource</th>
+    <th>Value</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Host</td>
+    <td>String of the form <code>DNS name</code> or <code>IP:Port</code></td>
+    <td>This is the address clients use when connecting to the Solace message router to send and receive messages. For a Solace VMR this there is only a single interface so the IP is the same as the management IP address. For Solace message router appliances this is the host address of the message-backbone.</td>
+  </tr>
+  <tr>
+    <td>Message VPN</td>
+    <td>String</td>
+    <td>The Solace message router Message VPN that this client should connect to. The simplest option is to use the “default” message-vpn which is present on all Solace message routers and fully enabled for message traffic on Solace VMRs.</td>
+  </tr>
+  <tr>
+    <td>Client Username</td>
+    <td>String</td>
+    <td>The client username. For the Solace VMR default message VPN, authentication is disabled by default, so this can be any value.</td>
+  </tr>
+  <tr>
+    <td>Client Password</td>
+    <td>String</td>
+    <td>The optional client password. For the Solace VMR default message VPN, authentication is disabled by default, so this can be any value or omitted.</td>
+  </tr>
+</table>
 
 For the purposes of this tutorial, you will connect to the default message VPN of a Solace VMR so the only required information to proceed is the Solace VMR host string which this tutorial accepts as an argument.
 
