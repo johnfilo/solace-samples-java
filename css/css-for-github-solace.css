@@ -14,8 +14,6 @@
 
 	body {
 		line-height: 1em; }
-	ol, ul {
-		list-style: none; }
 	.special-quote {
 		quotes: none; }
 	.special-quote:before, .special-quote:after {
@@ -112,7 +110,7 @@
 /* #Lists
 ================================================== */
 	ul, ol { margin-bottom: 20px;  }
-	ul { list-style: none outside; margin-left: 7px;}
+	ul { margin-left: 15px;}
 	ol { list-style: decimal; margin-left: 15px; }
 	ol, ul.square, ul.circle, ul.disc { }
 	ul.square { list-style: square outside; }

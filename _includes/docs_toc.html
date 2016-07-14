@@ -10,7 +10,7 @@
     display: inline-block;
     border-bottom: 1px solid"><a href="{{ site.baseurl }}/">{{ section.title }}</a></h4>
 
-    <ul>
+    <ul style="list-style: none; margin-left: 0px;">
       {% for item in section.docs %}
         {% assign item_url = item | prepend:"/docs/" | append:"/" %}
         {% assign p = site.docs | where:"url", item_url | first %}
@@ -28,7 +28,7 @@
     display: inline-block;
     border-bottom: 1px solid">Quick Links</h4>
 
-    <ul>
+    <ul style="list-style: none; margin-left: 0px;">
       <li><a href="{{ site.repository }}" target="_blank">View on GitHub</a></li>
     </ul>
 
