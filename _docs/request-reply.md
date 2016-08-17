@@ -5,7 +5,7 @@ title: Request/Reply
 
 This tutorial outlines both roles in the request-response message exchange pattern. It will show you how to act as the client by creating a request, sending it and waiting for the response. It will also show you how to act as the server by receiving incoming requests, creating a reply and sending it back to the client. It builds on the basic concepts introduced in [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe).
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/request-reply.png)
+![]({{ site.baseurl }}/images/request-reply.png)
 
 ---
 
@@ -46,7 +46,7 @@ It is also possible to use guaranteed messaging for request reply scenarios. In 
 
 For request-reply messaging to be successful it must be possible for the requestor to correlate the request with the subsequent reply. Solace messages support two fields that are needed to enable request-reply correlation. The reply-to field can be used by the requestor to indicate a Solace Topic or Queue where the reply should be sent. A natural choice for this is often the unique `P2PINBOX_IN_USE` topic which is an auto-generated unique topic per client which is accessible as a session property. The second requirement is to be able to detect the reply message from the stream of incoming messages. This is accomplished using the correlation-id field. This field will transit the Solace messaging system unmodified. Repliers can include the same correlation-id in a reply message to allow the requestor to detect the corresponding reply. The figure below outlines this exchange.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/Request-Reply_diagram-1.png)
+![]({{ site.baseurl }}/images/Request-Reply_diagram-1.png)
 
 For direct messages however, this is simplified through the use of the `Requestor` object as shown in this sample.
 
@@ -54,7 +54,7 @@ For direct messages however, this is simplified through the use of the `Requesto
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -72,7 +72,7 @@ As with other tutorials, this tutorial requires a JCSMPSession connected to the 
 
 First let’s look at the requestor. This is the application that will send the initial request message and wait for the reply.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/Request-Reply_diagram-2.png)
+![]({{ site.baseurl }}/images/Request-Reply_diagram-2.png)
 
 For convenience, we will use the `Requestor` object that is created from the `Session` object. The Requestor object makes use of the Session’s `Producer` and `Consumer` objects to send messages and receive replies. So in order for the `Requestor` to function correctly, there must be a `Producer` and `Consumer` created within the session. Normally this will already be done by other parts of the application. However, for demonstration purposes, the simplest was to accomplish this is show below.
 
@@ -117,7 +117,7 @@ If no response is received within the timeout specified (10 seconds in this exam
 
 Now it is time to receive the request and generate an appropriate reply.
 
-![Request-Reply_diagram-3](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/Request-Reply_diagram-3.png)
+![Request-Reply_diagram-3]({{ site.baseurl }}/images/Request-Reply_diagram-3.png)
 
 Just as with previous tutorials, you still need to connect a session and subscribe to the topics that requests are sent on. However, in order to send replies back to the requestor, you will also need a `Producer`. The following is an example of the most basic producer.
 
@@ -178,19 +178,21 @@ try {
 }
 ```
 
+---
+
 ## Summarizing
 
-The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
 
-*   [BasicRequestor.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/BasicRequestor.java)
-*   [BasicReplier.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/BasicReplier.java)
+*   [BasicRequestor.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/BasicRequestor.java)
+*   [BasicReplier.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/BasicReplier.java)
 
 ### Getting the Source
 
 Clone the GitHub repository containing the Solace samples.
 
 ```
-git clone git://github.com/mdspielman/solace-getting-started-java.git
+git clone {{ site.repository }}
 cd solace-getting-started-java
 ```
 

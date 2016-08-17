@@ -5,7 +5,7 @@ title: Persistence with Queues
 This tutorial builds on the basic concepts introduced in the [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe), and will show you how to send
 and receive persistent messages from a Solace message router queue in a point to point fashion.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/persistence-tutorial.png)
+![]({{ site.baseurl }}/images/persistence-tutorial.png)
 
 ---
 
@@ -41,7 +41,7 @@ As with other tutorials, this tutorial will connect to the default message VPN o
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -52,8 +52,9 @@ At the end, this tutorial walks through downloading and running the sample from 
 ## Provisioning a Queue through the API
 
 <div style="float: right">
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/message-router-queue.png)
+  <img src="{{ site.baseurl }}/images/message-router-queue.png"/>
 </div>
+
 The first requirement for guaranteed messaging using a Solace message router is to provision a guaranteed message endpoint. For this tutorial we will use a point-to-point queue. To learn more about different guaranteed message endpoints see [here](http://dev.solacesystems.com/docs/core-concepts/#endpoints).
 
 Durable endpoints are not auto created on Solace message routers. However there are two ways to provision them.
@@ -65,7 +66,7 @@ Using the Solace APIs to provision an endpoint can be a convenient way of gettin
 
 Provisioning an endpoint through the API requires the “Guaranteed Endpoint Create” permission in the client-profile. You can confirm this is enabled by looking at the client profile in SolAdmin. If it is correctly set you will see the following:
 
-![persistence-tutoral-image-3](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/persistence-tutoral-image-3.png)
+![]({{ site.baseurl }}/images/persistence-tutoral-image-3.png)
 
 Provisioning the queue involves three steps.
 
@@ -97,7 +98,7 @@ The ignore already exists flags signals to the API that the application is toler
 
 Now it is time to send a message to the queue.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/sending-message-to-queue-300x160.png)
+![]({{ site.baseurl }}/images/sending-message-to-queue-300x160.png)
 
 There is really no difference in the actual calls to the JCSMP message producer when sending a persistent message as compared to a direct message shown in the publish/subscribe tutorial. The difference in the persistent message is that the Solace message router will acknowledge the message once it is successfully stored on the message router.
 
@@ -136,7 +137,7 @@ At this point the producer has sent a message to the Solace message router and i
 
 Now it is time to receive the messages sent to your queue.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/receiving-message-from-queue-300x160.png)
+![]({{ site.baseurl }}/images/receiving-message-from-queue-300x160.png)
 
 You still need to connect a session just as you did with the publisher. With a connected session, you then need to bind to the Solace message router queue with a flow receiver. Flow receivers allow applications to receive messages from a Solace guaranteed message flow. Flows encapsulate all of the acknowledgement behavior required for guaranteed messaging. Conveniently flow receivers have the same interface as message consumers but flows also require some additional properties on creation.
 
@@ -205,12 +206,14 @@ try {
 }
 ```
 
+---
+
 ## Summarizing
 
-The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
 
-*   [QueueProducer.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/QueueProducer.java)
-*   [QueueConsumer.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/QueueConsumer.java)
+*   [QueueProducer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueProducer.java)
+*   [QueueConsumer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueConsumer.java)
 
 
 ### Getting the Source
@@ -218,7 +221,7 @@ The full source code for this example is available in [GitHub here](https://gith
 Clone the GitHub repository containing the Solace samples.
 
 ```
-git clone git://github.com/mdspielman/solace-getting-started-java.git
+git clone {{ site.repository }}
 cd solace-getting-started-java
 ```
 

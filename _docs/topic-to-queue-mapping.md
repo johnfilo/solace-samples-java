@@ -5,13 +5,13 @@ title: Topic to Queue Mapping
 
 This tutorial builds on the basic concepts introduced in [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial and will show you how to make use of one of Solace’s advanced queueing features called “Topic to Queue Mapping.”
 
-![topic-to-queue-mapping](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/topic-to-queue-mapping.png)
+![]({{ site.baseurl }}/images/topic-to-queue-mapping.png)
 
 In addition to spooling messages published directly to the queue, it is possible to add one or more topic subscriptions to a durable queue so that messages published to those topics are also delivered to and spooled by the queue. This is a powerful feature that enables queues to participate equally in point to point and publish / subscribe messaging models. More details about the [“Topic to Queue Mapping” feature here](http://dev.solacesystems.com/docs/core-concepts/#topic-queue-mapping).
 
 The following diagram illustrates this feature.
 
-<img src="http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/topic-to-queue-mapping-detail.png" width="500" height="206" />
+<img src="{{ site.baseurl }}/images/topic-to-queue-mapping-detail.png" width="500" height="206" />
 
 If you have a durable queue named `Q`, it will receive messages published directly to the queue destination named `Q`. However, it is also possible to add subscriptions to this queue in the form of topics. This example adds topics `A` and `B`. Once these subscriptions are added, the queue will start receiving messages published to the topic destinations `A` and `B`. When you combine this with the wildcard support provided by Solace topics this opens up a number of interesting use cases.
 
@@ -43,7 +43,7 @@ The goal of this tutorial is to understand the following:
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -140,11 +140,13 @@ try {
 }
 ```
 
+---
+
 ## Summarizing
 
-The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
 
-*   [TopicToQueueMapping.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/TopicToQueueMapping.java)
+*   [TopicToQueueMapping.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicToQueueMapping.java)
 
 
 ### Getting the Source
@@ -152,7 +154,7 @@ The full source code for this example is available in [GitHub here](https://gith
 Clone the GitHub repository containing the Solace samples.
 
 ```
-git clone git://github.com/mdspielman/solace-getting-started-java.git
+git clone {{ site.repository }}
 cd solace-getting-started-java
 ```
 

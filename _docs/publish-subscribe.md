@@ -5,7 +5,7 @@ title: Publish/Subscribe
 
 This tutorial will introduce you to the fundamentals of the Solace API by connecting a client, adding a topic subscription and sending a message matching this topic subscription. This forms the basis for any publish / subscribe message exchange illustrated here:
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/publish-subscribe.png)
+![]({{ site.baseurl }}/images/publish-subscribe.png)
 
 ---
 
@@ -70,7 +70,7 @@ For the purposes of this tutorial, you will connect to the default message VPN o
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -103,7 +103,7 @@ This tutorial uses “Direct” messages which are at most once delivery message
 
 With a session connected in the previous step, the next step is to create a message consumer. Message consumers enable the asynchronous receipt of messages through callbacks. These callbacks are defined in JCSMP by the XMLMessageListener interface.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/pub-sub-receiving-message-300x134.png)
+![]({{ site.baseurl }}/images/pub-sub-receiving-message-300x134.png)
 
 ```java
 final CountDownLatch latch = new CountDownLatch(1);
@@ -152,7 +152,7 @@ try {
 
 Now it is time to send a message to the waiting consumer.
 
-![](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/pub-sub-sending-message-300x134.png)
+![]({{ site.baseurl }}/images/pub-sub-sending-message-300x134.png)
 
 ### Establishing the publisher flow
 
@@ -190,17 +190,17 @@ At this point the producer has sent a message to the Solace message router and y
 
 ## Summarizing
 
-The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
 
-*   [TopicPublisher.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java)
-*   [TopicSubscriber.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java)
+*   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java)
+*   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java)
 
 ### Getting the Source
 
 Clone the GitHub repository containing the Solace samples.
 
 ```
-git clone git://github.com/mdspielman/solace-getting-started-java.git
+git clone {{ site.repository }}
 cd solace-getting-started-java
 ```
 

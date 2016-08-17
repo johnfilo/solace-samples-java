@@ -5,7 +5,7 @@ title: Confirmed Delivery
 
 This tutorial builds on the basic concepts introduced in [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial and will show you how to properly process publisher acknowledgements. Once an acknowledgement for a message has been received and processed, you have confirmed your persistent messages have been properly accepted by the Solace message router and therefore can be guaranteed of no message loss.
 
-![confirmed-delivery](http://2vs7bv4aq50r1hyri14a8xkf.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/confirmed-delivery.png)
+![confirmed-delivery]({{ site.baseurl }}/images/confirmed-delivery.png)
 
 ---
 
@@ -33,7 +33,7 @@ The goal of this tutorial is to understand the following:
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub](https://github.com/mdspielman/solace-getting-started-java) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -162,19 +162,18 @@ class PubCallback implements JCSMPStreamingPublishCorrelatingEventHandler {
 
 ---
 
-
 ## Summarizing
 
-The full source code for this example is available in [GitHub here](https://github.com/mdspielman/solace-getting-started-java). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
 
-*   [ConfirmedPublish.java](https://github.com/mdspielman/solace-getting-started-java/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java)
+*   [ConfirmedPublish.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java)
 
 ### Getting the Source
 
 Clone the GitHub repository containing the Solace samples.
 
 ```
-git clone git://github.com/mdspielman/solace-getting-started-java.git
+git clone {{ site.repository }}
 cd solace-getting-started-java
 ```
 
