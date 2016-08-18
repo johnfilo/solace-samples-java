@@ -176,8 +176,8 @@ At this point the producer has sent a message to the Solace message router and y
 
 The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
-*   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java)
-*   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java)
+*   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java){:target="_blank"}
+*   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java){:target="_blank"}
 
 ### Getting the Source
 

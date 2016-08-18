@@ -150,7 +150,7 @@ class PubCallback implements JCSMPStreamingPublishCorrelatingEventHandler {
 
 The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
-*   [ConfirmedPublish.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java)
+*   [ConfirmedPublish.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java){:target="_blank"}
 
 ### Getting the Source
 

@@ -196,8 +196,8 @@ try {
 
 The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
-*   [QueueProducer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueProducer.java)
-*   [QueueConsumer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueConsumer.java)
+*   [QueueProducer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueProducer.java){:target="_blank"}
+*   [QueueConsumer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueConsumer.java){:target="_blank"}
 
 
 ### Getting the Source
