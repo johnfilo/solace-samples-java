@@ -7,8 +7,6 @@ and receive persistent messages from a Solace message router queue in a point to
 
 ![]({{ site.baseurl }}/images/persistence-tutorial.png)
 
----
-
 ## Assumptions
 
 This tutorial assumes the following:
@@ -21,8 +19,6 @@ This tutorial assumes the following:
 
 One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
 
----
-
 ## Goals
 
 The goal of this tutorial is to understand the following:
@@ -31,13 +27,9 @@ The goal of this tutorial is to understand the following:
 2.  How to send a persistent message to a Solace queue
 3.  How to bind to this queue and receive a persistent message
 
----
-
 ## Solace message router properties
 
 As with other tutorials, this tutorial will connect to the default message VPN of a Solace VMR which has authentication disabled. So the only required information to proceed is the Solace VMR host string which this tutorial accepts as an argument.
-
----
 
 ## Trying it yourself
 
@@ -46,8 +38,6 @@ This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
-
----
 
 ## Provisioning a Queue through the API
 
@@ -92,8 +82,6 @@ session.provision(queue, endpointProps, JCSMPSession.FLAG_IGNORE_ALREADY_EXISTS)
 
 The ignore already exists flags signals to the API that the application is tolerate of the queue already existing even if it’s properties are different than those specified in the endpoint properties.
 
----
-
 ## Sending a message to a queue
 
 Now it is time to send a message to the queue.
@@ -130,8 +118,6 @@ prod.send(msg, queue);
 ```
 
 At this point the producer has sent a message to the Solace message router and it will be waiting for your consumer on the queue.
-
----
 
 ## Receiving a message from a queue
 
@@ -205,8 +191,6 @@ try {
     System.out.println("I was awoken while waiting");
 }
 ```
-
----
 
 ## Summarizing
 

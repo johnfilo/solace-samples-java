@@ -7,8 +7,6 @@ This tutorial will introduce you to the fundamentals of the Solace API by connec
 
 ![]({{ site.baseurl }}/images/publish-subscribe.png)
 
----
-
 ## Assumptions
 
 This tutorial assumes the following:
@@ -20,16 +18,12 @@ This tutorial assumes the following:
 
 One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
 
----
-
 ## Goals
 
 The goal of this tutorial is to demonstrate the most basic messaging interaction using Solace. This tutorial will show you:
 
 1.  How to build and send a message on a topic
 2.  How to subscribe to a topic and receive a message
-
----
 
 ## Solace message router properties
 
@@ -66,8 +60,6 @@ In order to send or receive messages to a Solace message router, you need to kno
 
 For the purposes of this tutorial, you will connect to the default message VPN of a Solace VMR so the only required information to proceed is the Solace VMR host string which this tutorial accepts as an argument.
 
----
-
 ## Trying it yourself
 
 This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Getting Started Examples]({{ site.baseurl }}/).
@@ -75,8 +67,6 @@ This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
-
----
 
 ## Connecting to the Solace message router
 
@@ -94,8 +84,6 @@ session.connect();
 ```
 
 At this point your client is connected to the Solace message router. You can use SolAdmin to view the client connection and related details.
-
----
 
 ## Receiving a message
 
@@ -146,8 +134,6 @@ try {
 }
 ```
 
----
-
 ## Sending a message
 
 Now it is time to send a message to the waiting consumer.
@@ -185,8 +171,6 @@ prod.send(msg,topic);
 ```
 
 At this point the producer has sent a message to the Solace message router and your waiting consumer will have received the message and printed its contents to the screen.
-
----
 
 ## Summarizing
 

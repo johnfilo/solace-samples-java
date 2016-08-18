@@ -7,8 +7,6 @@ This tutorial builds on the basic concepts introduced in [Persistence with Queue
 
 ![confirmed-delivery]({{ site.baseurl }}/images/confirmed-delivery.png)
 
----
-
 ## Assumptions
 
 This tutorial assumes the following:
@@ -21,15 +19,11 @@ This tutorial assumes the following:
 
 Note that one simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will with the “default” message VPN configured and ready for guaranteed messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration adapt the tutorial appropriately to match your configuration.
 
----
-
 ## Goals
 
 The goal of this tutorial is to understand the following:
 
 *  How to properly handle persistent message acknowledgements on message send.
-
----
 
 ## Trying it yourself
 
@@ -38,8 +32,6 @@ This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
-
----
 
 ## Message Acknowledgement Correlation
 
@@ -71,8 +63,6 @@ class MsgInfo {
 }
 ```
 
----
-
 ## Connection setup
 
 First, connect to the Solace message router in exactly the same way as other tutorials.
@@ -85,8 +75,6 @@ properties.setProperty(JCSMPProperties.USERNAME, "tutorialUser");
 final JCSMPSession session = JCSMPFactory.onlyInstance().createSession(properties);
 session.connect();
 ```
-
----
 
 ## Adding Message Correlation on Send
 
@@ -121,8 +109,6 @@ for (int i = 1; i &amp;lt;= count; i++) {
 ```
 
 This will create a correlation object, add it to a global list for later processing and then add it to the Solace message prior to sending.
-
----
 
 ## Processing the Solace Acknowledgement
 
@@ -159,8 +145,6 @@ class PubCallback implements JCSMPStreamingPublishCorrelatingEventHandler {
     }
 }
 ```
-
----
 
 ## Summarizing
 

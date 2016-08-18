@@ -7,8 +7,6 @@ This tutorial outlines both roles in the request-response message exchange patte
 
 ![]({{ site.baseurl }}/images/request-reply.png)
 
----
-
 ## Assumptions
 
 This tutorial assumes the following:
@@ -19,8 +17,6 @@ This tutorial assumes the following:
     *   Enabled client username
 
 One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
-
----
 
 ## Goals
 
@@ -33,8 +29,6 @@ The goal of this tutorial is to understand the following:
 *   On the replier side:
     1.  How to detect a request expecting a reply
     2.  How to generate a reply message
-
----
 
 ## Overview
 
@@ -50,8 +44,6 @@ For request-reply messaging to be successful it must be possible for the request
 
 For direct messages however, this is simplified through the use of the `Requestor` object as shown in this sample.
 
----
-
 ## Trying it yourself
 
 This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Getting Started Examples]({{ site.baseurl }}/).
@@ -60,13 +52,9 @@ To successfully build the samples you must have the Java API downloaded and avai
 
 At the end, this tutorial walks through downloading and running the sample from source.
 
----
-
 ## Connecting a session to the message router
 
 As with other tutorials, this tutorial requires a JCSMPSession connected to the default message VPN of a Solace VMR which has authentication disabled. So the only required information to proceed is the Solace VMR host string which this tutorial accepts as an argument. Connect the session as outlined in the [publish/subscribe tutorial]({{ site.baseurl }}/docs/publish-subscribe).
-
----
 
 ## Making a request
 
@@ -111,8 +99,6 @@ try {
 
 If no response is received within the timeout specified (10 seconds in this example), then the API will throw a `JCSMPRequestTimeoutException`.
 
----
-
 ## Replying to a request
 
 Now it is time to receive the request and generate an appropriate reply.
@@ -156,8 +142,6 @@ public void onReceive(BytesXMLMessage request) {
 }
 ```
 
----
-
 ## Receiving the Reply Message
 
 All that’s left is to receive and process the reply message as it is received at the requestor. If you now update your requestor code to match the following you will see each reply printed to the console.
@@ -177,8 +161,6 @@ try {
     System.out.println("Failed to receive a reply in " + timeoutMs + " msecs");
 }
 ```
-
----
 
 ## Summarizing
 

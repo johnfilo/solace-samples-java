@@ -15,8 +15,6 @@ The following diagram illustrates this feature.
 
 If you have a durable queue named `Q`, it will receive messages published directly to the queue destination named `Q`. However, it is also possible to add subscriptions to this queue in the form of topics. This example adds topics `A` and `B`. Once these subscriptions are added, the queue will start receiving messages published to the topic destinations `A` and `B`. When you combine this with the wildcard support provided by Solace topics this opens up a number of interesting use cases.
 
----
-
 ## Assumptions
 
 This tutorial assumes the following:
@@ -30,16 +28,12 @@ This tutorial assumes the following:
 
 Note that one simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will with the “default” message VPN configured and ready for guaranteed messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration adapt the tutorial appropriately to match your configuration.
 
----
-
 ## Goals
 
 The goal of this tutorial is to understand the following:
 
 1.  How to add topic subscriptions to a queue
 2.  How to interrogate the Solace message router to confirm capabilities.
-
----
 
 ## Trying it yourself
 
@@ -48,8 +42,6 @@ This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
-
----
 
 ## Connection setup
 
@@ -70,13 +62,9 @@ session.connect();
 
 The only difference in the above is the duplicate subscription processing boolean. One aspect to consider when adding subscriptions is how your application wishes the Solace API to behave in the face of pre-existing duplicate subscriptions. The default behavior is to throw an exception if an application tries to add a subscription that already exists. In this tutorial, we’ll relax that behavior and change our JCSMPSession so that it will tolerate the subscription already existing. For more details on this session flag, refer to the [product documentation for the Java API](http://dev.solacesystems.com/docs/enterprise-api-docs/){:target="_top"}.
 
----
-
 ## Review: Receiving message from a queue
 
 The [Persistence with Queues]({{ site.baseurl }}/docs/persistence-with-queues) tutorial demonstrated how to publish and receive messages from a queue. In doing this it used a JCSMPSession, XMLMessageProducer, and Consumer and this sample will do so in the same way. This sample will also depend on the endpoint being provisioned by through the API as was done in the previous tutorial. For clarity, this code is not repeated in the discussion but is included in the full working sample available in the summary section.
-
----
 
 ## Confirming Message Router Capabilities
 
@@ -98,8 +86,6 @@ if (session.isCapable(CapabilityType.PUB_GUARANTEED) &&
 
 In this case the tutorial requires permission to send and receive guaranteed messages, configure endpoints and manage queue subscriptions. If these capabilities are not available on the message router the tutorial will not proceed. If these capabilities are missing, you update the client-profile used by the client-username to enable them. See the [SolAdmin User Guide – Configuring Clients](https://sftp.solacesystems.com/Portal_Docs/#page/SolAdmin_User_Guide/Configuring_Clients.html){:target="_top"} for details.
 
----
-
 ## Adding a Subscription to a Queue
 
 In order to enable a queue to participate in publish/subscribe messaging, you need to add topic subscriptions to the queue to attract messages. You do this from the JCSMPSession using the addSubscription() method. The queue destination is passed as the first argument and then topic subscription to add and any flags. This example asks the API to block until the subscription is confirmed to be on the Solace message router. The subscription added in this tutorial is `Q/tutorial/topicToQueueMapping`.
@@ -109,8 +95,6 @@ Queue queue = JCSMPFactory.onlyInstance().createQueue("Q/tutorial/topicToQueueMa
 Topic tutorialTopic = JCSMPFactory.onlyInstance().createTopic("T/mapped/topic/sample");
 session.addSubscription(queue, tutorialTopic, JCSMPSession.WAIT_FOR_CONFIRM);
 ```
-
----
 
 ## Publish – Subscribe using a Queue
 
@@ -139,8 +123,6 @@ try {
     System.out.println("I was awoken while waiting");
 }
 ```
-
----
 
 ## Summarizing
 
