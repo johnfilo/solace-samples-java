@@ -13,13 +13,13 @@ and receive persistent messages from a Solace message router queue in a point to
 
 This tutorial assumes the following:
 
-*   You are familiar with Solace [core concepts](http://dev.solacesystems.com/docs/core-concepts/).
+*   You are familiar with Solace [core concepts](http://dev.solacesystems.com/docs/core-concepts/){:target="_top"}.
 *   You have access to a running Solace message router with the following configuration:
     *   Enabled message VPN
     *   Enabled client username
     *   Client-profile enabled with guaranteed messaging permissions.
 
-One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/). By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
+One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
 
 ---
 
@@ -41,9 +41,9 @@ As with other tutorials, this tutorial will connect to the default message VPN o
 
 ## Trying it yourself
 
-This tutorial is available in {{ site.external_github }} along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
-To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
 
@@ -55,7 +55,7 @@ At the end, this tutorial walks through downloading and running the sample from 
   <img src="{{ site.baseurl }}/images/message-router-queue.png"/>
 </div>
 
-The first requirement for guaranteed messaging using a Solace message router is to provision a guaranteed message endpoint. For this tutorial we will use a point-to-point queue. To learn more about different guaranteed message endpoints see [here](http://dev.solacesystems.com/docs/core-concepts/#endpoints).
+The first requirement for guaranteed messaging using a Solace message router is to provision a guaranteed message endpoint. For this tutorial we will use a point-to-point queue. To learn more about different guaranteed message endpoints see [here](http://dev.solacesystems.com/docs/core-concepts/#endpoints){:target="_top"}.
 
 Durable endpoints are not auto created on Solace message routers. However there are two ways to provision them.
 
@@ -71,7 +71,7 @@ Provisioning an endpoint through the API requires the “Guaranteed Endpoint Cre
 Provisioning the queue involves three steps.
 
 *   Obtaining a Java API Queue object representing the queue you wish to create.
-*   Setting the Queue properties that you wish for your queue. This examples permits consumption of messages and sets the queue type to exclusive. More details on queue permissions can be found in the [Java developer documentation](http://dev.solacesystems.com/docs/enterprise-api-docs/).
+*   Setting the Queue properties that you wish for your queue. This examples permits consumption of messages and sets the queue type to exclusive. More details on queue permissions can be found in the [Java developer documentation](http://dev.solacesystems.com/docs/enterprise-api-docs/){:target="_top"}.
 *   Provisioning the Queue on the Solace message router
 
 The following code shows you this for the queue named `Q/tutorial`.
@@ -156,7 +156,7 @@ EndpointProperties endpoint_props = new EndpointProperties();
 endpoint_props.setAccessType(EndpointProperties.ACCESSTYPE_EXCLUSIVE);
 ```
 
-Both flow properties and endpoint properties are explained in more detail in the [Java developer documentation](http://dev.solacesystems.com/docs/enterprise-api-docs/).
+Both flow properties and endpoint properties are explained in more detail in the [Java developer documentation](http://dev.solacesystems.com/docs/enterprise-api-docs/){:target="_top"}.
 
 Flows are created from Solace session objects just as direct message consumers are. Flows can take up to four arguments during creation:
 
@@ -210,7 +210,7 @@ try {
 
 ## Summarizing
 
-The full source code for this example is available in {{ site.external_github }}. If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
 *   [QueueProducer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueProducer.java)
 *   [QueueConsumer.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/QueueConsumer.java)
@@ -255,4 +255,4 @@ $ ./build/staged/bin/queueConsumer HOST
 
 You have now successfully connected a client, sent persistent messages to a queue and received them from a consumer flow.
 
-If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/) for answers to common issues.
+If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/){:target="_top"} for answers to common issues.

@@ -7,9 +7,6 @@ baseurl: "/solace-samples-java" # the subpath of your site, e.g. /blog
 url: "solacesamples.github.io" # the base hostname & protocol for your site
 repository: https://github.com/SolaceSamples/solace-samples-java
 
-# For linking to external sites and maintaining syntax highligting in the editors. (Avoiding interpretation of underscore in the target)
-external_github: <a href="https://github.com/SolaceSamples/solace-samples-java" target="_blank">GitHub</a>
-
 # Google services
 google_analytics: UA-3921398-7
 

@@ -13,12 +13,12 @@ This tutorial will introduce you to the fundamentals of the Solace API by connec
 
 This tutorial assumes the following:
 
-*   You are familiar with Solace [core concepts](http://dev.solacesystems.com/docs/core-concepts/).
+*   You are familiar with Solace [core concepts](http://dev.solacesystems.com/docs/core-concepts/){:target="_top"}.
 *   You have access to a running Solace message router with the following configuration:
     *   Enabled message VPN
     *   Enabled client username
 
-One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/). By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
+One simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will run with the “default” message VPN configured and ready for messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration, adapt the instructions to match your configuration.
 
 ---
 
@@ -70,9 +70,9 @@ For the purposes of this tutorial, you will connect to the default message VPN o
 
 ## Trying it yourself
 
-This tutorial is available in {{ site.external_github }} along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
-To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
 
@@ -190,7 +190,7 @@ At this point the producer has sent a message to the Solace message router and y
 
 ## Summarizing
 
-The full source code for this example is available in {{ site.external_github }}. If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
 *   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java)
 *   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java)
@@ -258,4 +258,4 @@ The received message is printed to the screen. The TextMessage contents was “H
 
 You have now successfully connected a client, subscribed to a topic and exchanged messages using this topic.
 
-If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/) for answers to common issues.
+If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/){:target="_top"} for answers to common issues.

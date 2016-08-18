@@ -13,13 +13,13 @@ This tutorial builds on the basic concepts introduced in [Persistence with Queue
 
 This tutorial assumes the following:
 
-*   You are familiar with Solace [core concepts](/docs/core-concepts/).
+*   You are familiar with Solace [core concepts](http://dev.solacesystems.com//docs/core-concepts/){:target="_top"}.
 *   You have access to a running Solace message router with the following configuration:
     *   Enabled message VPN configured for guaranteed messaging support.
     *   Enabled client username.
     *   Client-profile enabled with guaranteed messaging permissions.
 
-Note that one simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/). By default the Solace VMR will with the “default” message VPN configured and ready for guaranteed messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration adapt the tutorial appropriately to match your configuration.
+Note that one simple way to get access to a Solace message router is to start a Solace VMR load [as outlined here](http://dev.solacesystems.com/docs/get-started/setting-up-solace-vmr_vmware/){:target="_top"}. By default the Solace VMR will with the “default” message VPN configured and ready for guaranteed messaging. Going forward, this tutorial assumes that you are using the Solace VMR. If you are using a different Solace message router configuration adapt the tutorial appropriately to match your configuration.
 
 ---
 
@@ -33,9 +33,9 @@ The goal of this tutorial is to understand the following:
 
 ## Trying it yourself
 
-This tutorial is available in {{ site.external_github }} along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
-To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
+To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
 At the end, this tutorial walks through downloading and running the sample from source.
 
@@ -164,7 +164,7 @@ class PubCallback implements JCSMPStreamingPublishCorrelatingEventHandler {
 
 ## Summarizing
 
-The full source code for this example is available in {{ site.external_github }}. If you combine the example source code shown above results in the following source:
+The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
 *   [ConfirmedPublish.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java)
 
@@ -206,4 +206,4 @@ $ ./build/staged/bin/confirmedPublish HOST
 
 You have now successfully sent persistent messages to a Solace router and confirmed its receipt by correlating the acknowledgement.
 
-If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/) for answers to common issues.
+If you have any issues sending and receiving a message, check the [Solace community](http://dev.solacesystems.com/community/){:target="_top"} for answers to common issues.
