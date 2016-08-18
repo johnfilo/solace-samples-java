@@ -33,7 +33,7 @@ The goal of this tutorial is to understand the following:
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in {{ site.external_github }} along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -164,7 +164,7 @@ class PubCallback implements JCSMPStreamingPublishCorrelatingEventHandler {
 
 ## Summarizing
 
-The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in {{ site.external_github }}. If you combine the example source code shown above results in the following source:
 
 *   [ConfirmedPublish.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/ConfirmedPublish.java)
 

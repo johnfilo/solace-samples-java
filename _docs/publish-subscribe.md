@@ -70,7 +70,7 @@ For the purposes of this tutorial, you will connect to the default message VPN o
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub]({{ site.repository }}) along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in {{ site.external_github }} along with the other [Getting Started Examples]({{ site.baseurl }}/).
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/). The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
@@ -190,7 +190,7 @@ At this point the producer has sent a message to the Solace message router and y
 
 ## Summarizing
 
-The full source code for this example is available in [GitHub]({{ site.repository }}). If you combine the example source code shown above results in the following source:
+The full source code for this example is available in {{ site.external_github }}. If you combine the example source code shown above results in the following source:
 
 *   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java)
 *   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java)

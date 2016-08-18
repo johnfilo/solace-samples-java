@@ -1,10 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Getting Started Samples for Solace Messaging API for Java (JCSMP)
 email: info@solacesystems.com
@@ -14,9 +7,8 @@ baseurl: "/solace-samples-java" # the subpath of your site, e.g. /blog
 url: "solacesamples.github.io" # the base hostname & protocol for your site
 repository: https://github.com/SolaceSamples/solace-samples-java
 
-twitter:
-  username: "@github"
-github_username:  mdspielman
+# For linking to external sites and maintaining syntax highligting in the editors. (Avoiding interpretation of underscore in the target)
+external_github: <a href="https://github.com/SolaceSamples/solace-samples-java" target="_blank">GitHub</a>
 
 # Google services
 google_analytics: UA-3921398-7
