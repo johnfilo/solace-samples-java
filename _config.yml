@@ -18,6 +18,9 @@ twitter:
   username: "@github"
 github_username:  mdspielman
 
+# Google services
+google_analytics: UA-3921398-7
+
 # Build settings
 markdown: kramdown
 
