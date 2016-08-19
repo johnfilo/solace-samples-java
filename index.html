@@ -11,10 +11,10 @@ layout: default
       {% assign p = site.docs | where:"url", item_url | first %}
       {% assign loopindex = forloop.index | modulo: 2 %}
       {% if loopindex == 1 or forloop.first %}
-        <div class="grid" style="height:200px;">
+        <div class="grid">
       {% endif %}
-          <div class="unit half" style='padding:10px; height:100%;'>
-            <div class="grid" style='border-width:1px; border-color:#d3d3d3; border-style:solid; padding:10px; background-color:#ffffff; border-radius:5px; height:100%;'>
+          <div class="unit half" style='padding:10px;'>
+            <div class="grid" style='border-width:1px; border-color:#d3d3d3; border-style:solid; padding:10px; background-color:#ffffff; border-radius:5px;'>
               <h3 class="nolineheading">{{ p.title }}</h3>
               <div class='unit half '  style='font-size:14px; '  itemprop="text" >
                 <p>
