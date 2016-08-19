@@ -1,7 +1,10 @@
 ---
 layout: docs
 title: Publish/Subscribe
+summary: Learn how to set up pub/sub messaging on a Solace VMR.
+icon: publish-subscribe.png
 ---
+
 
 This tutorial will introduce you to the fundamentals of the Solace API by connecting a client, adding a topic subscription and sending a message matching this topic subscription. This forms the basis for any publish / subscribe message exchange illustrated here:
 

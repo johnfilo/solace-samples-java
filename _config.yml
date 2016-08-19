@@ -1,11 +1,14 @@
 # Site settings
-title: Getting Started Samples for Solace Messaging API for Java (JCSMP)
-email: info@solacesystems.com
-description: > # this means to ignore newlines until "baseurl:"
-  These tutorials will get you up to speed and sending messages with Solace technology as quickly as possible.
-baseurl: "/solace-samples-java" # the subpath of your site, e.g. /blog
-url: "solacesamples.github.io" # the base hostname & protocol for your site
+title: Solace Messaging API for Java (JCSMP)
+baseurl: "/solace-samples-java" # the subpath of your site, e.g. /solace-samples-java
 repository: https://github.com/SolaceSamples/solace-samples-java
+
+# Also see _includes/intro.html to customize the description which gets included in index.html.
+
+
+#----------------------------------------------------
+# Generally don't modify items below this point
+url: "solacesamples.github.io" # the base hostname & protocol for your site
 
 # Google services
 google_analytics: UA-3921398-7
