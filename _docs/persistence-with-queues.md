@@ -209,12 +209,12 @@ Clone the GitHub repository containing the Solace samples.
 
 ```
 git clone {{ site.repository }}
-cd solace-getting-started-java
+cd solace-samples-java
 ```
 
 ### Building
 
-Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-getting-started-java`.
+Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-samples-java`.
 
 In the following command line replace VERSION with the Solace API version you downloaded.
 
