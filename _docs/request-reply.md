@@ -49,7 +49,7 @@ For direct messages however, this is simplified through the use of the `Requesto
 
 ## Trying it yourself
 
-This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Getting Started Examples]({{ site.baseurl }}/).
+This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Solace Developer Getting Started Examples](http://dev.solacesystems.com/get-started/java-tutorials/){:target="_top"}.
 
 To successfully build the samples you must have the Java API downloaded and available. The Java API library can be [downloaded here](http://dev.solacesystems.com/downloads/){:target="_top"}. The Java API is distributed as a zip file containing the required jars, API documentation, and examples.
 
