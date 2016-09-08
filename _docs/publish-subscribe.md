@@ -179,8 +179,8 @@ At this point the producer has sent a message to the Solace message router and y
 
 The full source code for this example is available in [GitHub]({{ site.repository }}){:target="_blank"}. If you combine the example source code shown above results in the following source:
 
-*   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicPublisher.java){:target="_blank"}
-*   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solacelabs/getstarted/TopicSubscriber.java){:target="_blank"}
+*   [TopicPublisher.java]({{ site.repository }}/blob/master/src/main/java/com/solace/samples/TopicPublisher.java){:target="_blank"}
+*   [TopicSubscriber.java]({{ site.repository }}/blob/master/src/main/java/com/solace/samples/TopicSubscriber.java){:target="_blank"}
 
 ### Getting the Source
 
@@ -188,12 +188,12 @@ Clone the GitHub repository containing the Solace samples.
 
 ```
 git clone {{ site.repository }}
-cd solace-samples-java
+cd {{ site.baseurl | remove: '/'}}
 ```
 
 ### Building
 
-Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `solace-samples-java`.
+Building these examples is simple.  Download and unpacked the Java API library to a known location. Then copy the contents of the `sol-jcsmp-VERSION/lib` directory to a `libs` sub-directory in your `{{ site.baseurl | remove: '/'}}`.
 
 In the following command line replace VERSION with the Solace API version you downloaded.
 
