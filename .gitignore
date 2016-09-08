@@ -5,3 +5,7 @@ _site
 .gradle/
 build/
 libs/
+.classpath
+.project
+.settings/
+bin/
